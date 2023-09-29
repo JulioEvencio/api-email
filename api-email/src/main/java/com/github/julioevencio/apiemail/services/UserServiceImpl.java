@@ -90,5 +90,12 @@ public class UserServiceImpl implements UserService {
 	public List<UserResponseDTO> findAll() {
 		return userRepository.findAll().stream().map(UserMapperDTO::fromEntity).toList();
 	}
+	
+	@Override
+	public UserEntity getLoggedUser() {
+		String username = SecurityContextHolder.getContext().getAuthentication().getName();
+
+		return userRepository.findByUsername(username).orElseThrow(() -> new ApiEmailResourceNotFoundException("User not found"));
+	}
 
 }

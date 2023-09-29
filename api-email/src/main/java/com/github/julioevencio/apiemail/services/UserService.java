@@ -6,6 +6,7 @@ import com.github.julioevencio.apiemail.dto.security.LoginRequestDTO;
 import com.github.julioevencio.apiemail.dto.security.TokenResponseDTO;
 import com.github.julioevencio.apiemail.dto.user.UserRequestDTO;
 import com.github.julioevencio.apiemail.dto.user.UserResponseDTO;
+import com.github.julioevencio.apiemail.entities.UserEntity;
 
 public interface UserService {
 
@@ -16,5 +17,7 @@ public interface UserService {
 	UserResponseDTO me();
 
 	List<UserResponseDTO> findAll();
+	
+	UserEntity getLoggedUser();
 
 }

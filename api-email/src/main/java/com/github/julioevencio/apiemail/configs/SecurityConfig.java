@@ -67,6 +67,7 @@ public class SecurityConfig {
 						.requestMatchers(HttpMethod.POST, "/api/auth/login", "/api/auth/register").permitAll()
 						.requestMatchers("/v3/api-docs/**", "/swagger-ui/**").permitAll()
 						.requestMatchers(HttpMethod.GET, "/api/users/me").authenticated()
+						.requestMatchers(HttpMethod.POST, "/api/emails/send").authenticated()
 						.requestMatchers(HttpMethod.GET, "/api/users").hasAuthority("ROLE_ADMIN")
 						.anyRequest().denyAll()
 					)
