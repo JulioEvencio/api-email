@@ -1,6 +1,6 @@
 # API E-mail
 
-This project is a email sending API
+This project is an email sending API
 
 ## Requirements
 
