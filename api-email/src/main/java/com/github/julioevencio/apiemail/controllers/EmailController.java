@@ -12,7 +12,6 @@ import com.github.julioevencio.apiemail.dto.email.EmailRequestDTO;
 import com.github.julioevencio.apiemail.dto.email.EmailResponseDTO;
 import com.github.julioevencio.apiemail.exceptions.ApiEmailMessageError;
 import com.github.julioevencio.apiemail.services.EmailService;
-import com.github.julioevencio.apiemail.services.EmailServiceImpl;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
@@ -29,7 +28,7 @@ public class EmailController {
 
 	private final EmailService emailService;
 
-	public EmailController(EmailServiceImpl emailService) {
+	public EmailController(EmailService emailService) {
 		this.emailService = emailService;
 	}
 	

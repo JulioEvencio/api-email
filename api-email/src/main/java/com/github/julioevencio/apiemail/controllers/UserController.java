@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.github.julioevencio.apiemail.dto.user.UserResponseDTO;
 import com.github.julioevencio.apiemail.exceptions.ApiEmailMessageError;
 import com.github.julioevencio.apiemail.services.UserService;
-import com.github.julioevencio.apiemail.services.UserServiceImpl;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.ArraySchema;
@@ -29,7 +28,7 @@ public class UserController {
 
 	private final UserService userService;
 
-	public UserController(UserServiceImpl userService) {
+	public UserController(UserService userService) {
 		this.userService = userService;
 	}
 

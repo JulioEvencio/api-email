@@ -14,7 +14,6 @@ import com.github.julioevencio.apiemail.dto.user.UserRequestDTO;
 import com.github.julioevencio.apiemail.dto.user.UserResponseDTO;
 import com.github.julioevencio.apiemail.exceptions.ApiEmailMessageError;
 import com.github.julioevencio.apiemail.services.UserService;
-import com.github.julioevencio.apiemail.services.UserServiceImpl;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
@@ -30,7 +29,7 @@ public class AuthController {
 
 	private final UserService userService;
 
-	public AuthController(UserServiceImpl userService) {
+	public AuthController(UserService userService) {
 		this.userService = userService;
 	}
 

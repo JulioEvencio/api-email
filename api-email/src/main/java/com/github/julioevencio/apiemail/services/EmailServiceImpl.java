@@ -25,7 +25,7 @@ public class EmailServiceImpl implements EmailService {
 	private final UserService userService;
 	private final EmailRepository emailRepository;
 
-	public EmailServiceImpl(JavaMailSender javaMailSender, UserServiceImpl userService, EmailRepository emailRepository) {
+	public EmailServiceImpl(JavaMailSender javaMailSender, UserService userService, EmailRepository emailRepository) {
 		this.javaMailSender = javaMailSender;
 		this.userService = userService;
 		this.emailRepository = emailRepository;
