@@ -33,7 +33,7 @@ The API documentation is available on Swagger. To access it, follow these steps:
 1. Clone this repository
 2. create a database named `db_api_email`
 3. Configure your database in the application-dev.yml or application-prod.yml file
-4. Configure your e-mail and password, Your email must be configured to be used on apps/systems, in the application-dev.yml or application-prod.yml file
+4. Configure your e-mail and password (your email must be configured to be used on apps/systems) in the application-dev.yml or application-prod.yml file
 5. Run project
 
 ## Contribution
