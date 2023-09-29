@@ -79,9 +79,7 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public UserResponseDTO me() {
-		String username = SecurityContextHolder.getContext().getAuthentication().getName();
-
-		UserEntity user = userRepository.findByUsername(username).orElseThrow(() -> new ApiEmailResourceNotFoundException("User not found"));
+		UserEntity user = this.getLoggedUser();
 
 		return UserMapperDTO.fromEntity(user);
 	}
